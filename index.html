@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+   <body style="text-align: center;">
+<h1 id="Family_member_name"></h1>
+<img src="Screenshot 2021-08-11 143634.png" style="width: 280px; height: 350px" id="Family_member_image">
+<h4 id="Family_member_name"></h4>
+<button id="NextButton" onclick="update();">Next</button>
+<script>
+    var images = [
+        "Appa.png",
+        "Mom.png",
+        "Me.png",
+    ];
+    var names = [
+        "My Father (Vijay Kumar)",
+        "My Mother (Shalini)",
+        "Me (Rishik V)",
+    ];
+    var i = 0
+    function update() {
+        i++;
+        var Numbers_of_family_member_in_array = 3
+        if(i >  Numbers_of_family_member_in_array)
+        {
+            i = 0;
+        }
+        var updatedimage = images[i];
+        var updatedname = names[i];
+        document.getElementById("Family_member_image").src = updatedimage;
+        document.getElementById("Family_member_name").src = updatedname;
+    }
+</script>
+</body>
+</html>
